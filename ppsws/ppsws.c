@@ -80,5 +80,5 @@ void app_main(void)
     xTaskCreatePinnedToCore(lookAtPhone, "Task0", 1024, NULL, 0, NULL, 0);
     xTaskCreatePinnedToCore(chitchat, "Task1", 1024, NULL, 0, NULL, 0);
     xTaskCreatePinnedToCore(customerComes, "customerComes", 1024, NULL, 2, NULL, 0);
-    //esp_register_freertos_idle_hook_for_cpu(idleHook, 0);
+    esp_register_freertos_idle_hook_for_cpu(idleHook, 0);
 }
